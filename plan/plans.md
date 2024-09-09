@@ -36,6 +36,6 @@ niceToHave:
 
 
 
-arbeidsdag: Onsgag, fulldag!
+arbeidsdag: Onsdag, fulldag!
 
 Hei folkens, dere er best
