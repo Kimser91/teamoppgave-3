@@ -38,4 +38,4 @@ niceToHave:
 
 arbeidsdag: Onsdag, fulldag!
 
-Hei folkens, dere er best
+
