@@ -7,8 +7,6 @@
 
 <h1 align="center">PLANS</h1>
 
----
-
 1. Style en bil i steg, type diver i forskjellige farger som endres til like for å få poeng.
 2. Bruke inline CSS for å endre panelfarger.
 3. Poeng multiplyers ved møte av folk og riktig hilsen eller action blir valgt.
