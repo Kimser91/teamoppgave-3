@@ -4,6 +4,7 @@ function updateView()
     html.innerHTML = /*HTML*/ `
     <div>Hei</div>
     `
+    points = 0
     winOrLoseCheck()
 } 
 
@@ -176,7 +177,7 @@ function getRandomObject() {
     function winFunction() {
         html.innerHTML = /*HTML*/ `
         <div>Gratulerer, du vant spillet!!</div>
-        <button onclick="Location.reload()">Spill igjen</button>
+        <button onclick="location.reload()">Spill igjen</button>
         <img src="https://tenor.com/view/snoop-dogg-dancing-fun-funny-dance-dance-moves-gif-6648927863143953704" alt="Snoop Dogg danser fordi du vant <3">
         `
     }
@@ -184,7 +185,7 @@ function getRandomObject() {
     function loseFunction() {
         html.innerHTML = /*HTML*/ `
         <div>Lol du tapte, noob</div>
-        <button onclick="Location.reload()">Spill igjen</button>
+        <button onclick="location.reload()">Spill igjen</button>
         <img src="https://tenor.com/view/kto-kounotori-kounotoritoken-lbow-storkholders-gif-25676479" alt="Du er en taper >:(">
         `
     }
