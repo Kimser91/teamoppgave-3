@@ -2,9 +2,57 @@ updateView()
 function updateView() 
 {
     html.innerHTML = /*HTML*/ `
-    <div>Hei</div>
+    <div id="you-met">
+    <div class="you_met-found__text">You met:</div>
+    <div class="you_met-found__window"></div>
+    <button class="you_met-found__button">Greet:</button>
+</div>
+<div id="road">
+
+
+    <div id="car">
+
+        <div id="car__front"></div>
+
+        <div id="car__middle">
+
+            <div class="door-container">
+                <div id="front-left-door" class="door border door-left"></div>
+                <div id="front-right-door" class="door border door-left"></div>
+            </div>
+
+            <div id="roof">
+                <div class="front-window"></div>
+                <div class="front-side-windows"></div>
+                <div class="back-side-windows"></div>
+                <div class="back-window"></div>
+                <div class="roof-frame"></div>
+            </div>
+
+            <div class="door-container">
+                <div id="back-left-door" class="door border door-right"></div>
+                <div id="back-right-door" class="door border door-right"></div>
+            </div>
+
+        </div>
+
+        <div id="car__back"></div>
+
+        <div class="tyre-front-left tyre"></div>
+        <div class="tyre-front-right tyre"></div>
+        <div class="tyre-back-left tyre"></div>
+        <div class="tyre-back-right tyre"></div>
+
+    </div>
+
+</div>
+<div id="you-found">
+    <div class="you_met-found__text">You found:</div>
+    <div class="you_met-found__window"></div>
+    <button class="you_met-found__button">Use?</button>
+</div>
     `
-    points = 0
+    
     winOrLoseCheck()
 } 
 
