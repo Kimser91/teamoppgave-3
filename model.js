@@ -1,5 +1,17 @@
 let html = document.getElementById('app');
 
+let points = 25;
+let win = 50;
+let loose = 0;
+
+
+
+
+
+
+
+
+/*
 const model = {              
     data: {                  
         panels: 
@@ -67,7 +79,25 @@ const model = {
 
         ],
 
+        persons: [
+            {
+                name: 'Eskil',
+                greating: 'Hva tenker du om LoC eller GM?',
+                pointMultiplyer: 2 
+            },
+            {
+                name: 'Rebecka',
+                greating: '',
+                pointMultiplyer: 5 
+            },
+            {
+                name: 'Marie',
+                greating: 'Har du noe energidrikke?',
+                pointMultiplyer: 2 
+            }
+        ],
+
         hasDone: false,
     },
 
-}
+}*/
