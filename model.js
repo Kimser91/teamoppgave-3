@@ -3,7 +3,7 @@ let html = document.getElementById('app');
 let points = 25;
 let win = 50;
 let loose = 0;
-
+let multiplyer = 1;
 
 
 
