@@ -17,3 +17,23 @@ function foundSpraycan()
 }
    for (0+1  = 6)*/ 
 
+/*function changecolor() 
+{
+    if(!document.getElementById('front-left-door').style.backgroundColor == 'red')
+        {
+            document.getElementById('front-left-door').style.backgroundColor = 'red'
+        }
+}*/
+
+/*function winOrLoseCheck() 
+{
+    if(points == win) 
+        {
+            //winfunction()
+        }
+    else if (points == lose) 
+        {
+            //losefunction()
+        }
+}*/
+
