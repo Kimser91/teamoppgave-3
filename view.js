@@ -56,7 +56,12 @@ function updateView()
     winOrLoseCheck()
 } 
 
-
+function startDriving() 
+{
+    let r = Math.floor(Math.random()*100)
+    if(r < 20){getRandomPerson()}
+    else if(r > 20){getRandomObject()}
+}
 
 function getRandomPerson() {
     let random = Math.floor(Math.random() * 4)
@@ -151,6 +156,7 @@ function getRandomObject() {
 }
 
     function correctGreeting(){
+        multiplyer = 1;
         multiplyer++
         points = points * multiplyer
         document.getElementById("you-meet").innerHTML = 
@@ -162,20 +168,20 @@ function getRandomObject() {
     function wrongGreeting(){
     multiplyer= 0.5
     points = points * multiplyer
+    points = -5
     document.getElementById("you-meet").innerHTML = 
     `
     <div>Wrong!</div>
     `
     }
 
-    function aksepterItem(){
-
-
+    function acceptItem(){
+        points++
+        startDriving()
     }
 
-    function avslåItem(){
-
-        
+    function declineItem(){
+        startDriving()
     }
     
     
