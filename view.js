@@ -118,7 +118,15 @@ function getRandomObject() {
     `
     }
 
-    function Co
+    function aksepterItem(){
+
+
+    }
+
+    function avslåItem(){
+
+        
+    }
     
     
     function changeColor() {
