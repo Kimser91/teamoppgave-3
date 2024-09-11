@@ -3,9 +3,9 @@ function updateView()
 {
     html.innerHTML = /*HTML*/ `
     <div id="you-met">
-    <div class="you_met-found__text">You met:</div>
+    <div id="you-met1" class="you_met-found__text">You met:</div>
     <div class="you_met-found__window"></div>
-    <button class="you_met-found__button">Greet:</button>
+    
 </div>
 <div id="road">
 
@@ -44,15 +44,15 @@ function updateView()
         <div class="tyre-back-right tyre"></div>
 
     </div>
-
+    <button onclick="startDriving()">wanna drive?</button>
 </div>
 <div id="you-found">
-    <div class="you_met-found__text">You found:</div>
+    <div id="you-found1" class="you_met-found__text">You found:</div>
     <div class="you_met-found__window"></div>
-    <button class="you_met-found__button">Use?</button>
+    
 </div>
     `
-    
+    console.log(points)
     winOrLoseCheck()
 } 
 
@@ -66,7 +66,7 @@ function startDriving()
 function getRandomPerson() {
     let random = Math.floor(Math.random() * 4)
     if (random == 1) {
-        let m = document.getElementById('you-meet').innerHTML = /*html*/
+        document.getElementById("you-met1").innerHTML = /*html*/
             `
             <div> Eskil</div><br>
             <div>Hva tenker du om LoC eller GM?</div>
@@ -75,10 +75,10 @@ function getRandomPerson() {
             <button onclick="wrongGreeting()">Bare søppel</button>
 
             `
-        return m;
+      
     }
     else if (random == 2) {
-        let m = document.getElementById('you-meet').innerHTML = /*HTML*/
+    document.getElementById("you-met1").innerHTML = /*HTML*/
             `
     <div> Rebecka</div><br>
     <div>Hva gjør dere?</div>
@@ -87,10 +87,10 @@ function getRandomPerson() {
     <button onclick="wrongGreeting()">Gaming</button>
 
     `
-        return m;
+ 
     }
     else if (random == 3) {
-        let m = document.getElementById('you-meet').innerHTML = /*HTML*/
+   document.getElementById("you-met1").innerHTML = /*HTML*/
     `
     <div> Marie</div><br>
     <div>Er det lurt å skrive logg?</div>
@@ -98,7 +98,7 @@ function getRandomPerson() {
     <button onclick="correctGreeting()">Ja</button>
     <button onclick="wrongGreeting()">Nei</button>
     `
-        return m;
+      
 
     }
     else {getRandomPerson()};
@@ -109,48 +109,48 @@ function getRandomPerson() {
 function getRandomObject() {
     let random = Math.floor(Math.random() * 5)
     if (random ==1){
-        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+       document.getElementById("you-found1").innerHTML = /*HTML*/
         `
             <div>Sprayboks</div>
             <div>Rød</div>
 
-        <button onclick=>Aksepter</button>
+        <button onclick="acceptItem()">Aksepter</button>
         <button onclick=>Avslå</button>
         `
-        return m;
+       
     }
     else if (random ==2){
-        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+       document.getElementById("you-found1").innerHTML = /*HTML*/
         `
             <div>Wunderbaum</div>
             <div>Grønn</div>
 
-        <button onclick=>Aksepter</button>
-        <button onclick=>Avslå</button>
+        <button onclick="acceptItem()">Aksepter</button>
+        <button onclick="declineItem()">Avslå</button>
         `
-        return m;
+       
     }
     else if (random ==3){
-        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+       document.getElementById("you-found1").innerHTML = /*HTML*/
         `
             <div>Terning</div>
             <div>Rosa</div>
 
-        <button onclick=>Aksepter</button>
-        <button onclick=>Avslå</button>
+        <button onclick="acceptItem()">Aksepter</button>
+        <button onclick="declineItem()">Avslå</button>
         `
-        return m;
+       
     }
     else if (random ==4){
-        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+        document.getElementById("you-found1").innerHTML = /*HTML*/
         `
             <div>Eksos</div>
             <div>Krom</div>
 
-        <button onclick=>Aksepter</button>
-        <button onclick=>Avslå</button>
+        <button onclick="acceptItem()">Aksepter</button>
+        <button onclick="declineItem()">Avslå</button>
         `
-        return m;
+       
     }
     else {getRandomObject()};
 }
@@ -159,29 +159,34 @@ function getRandomObject() {
         multiplyer = 1;
         multiplyer++
         points = points * multiplyer
-        document.getElementById("you-meet").innerHTML = 
+        document.getElementById("you-met1").innerHTML = 
         `
         <div>Correct!</div>
         `
+        startDriving()
     }
 
     function wrongGreeting(){
     multiplyer= 0.5
     points = points * multiplyer
     points = -5
-    document.getElementById("you-meet").innerHTML = 
+    document.getElementById("you-met1").innerHTML = 
     `
     <div>Wrong!</div>
     `
+    startDriving()
     }
 
     function acceptItem(){
         points++
+        updateView()
         startDriving()
     }
 
     function declineItem(){
+        updateView()
         startDriving()
+        
     }
     
     
