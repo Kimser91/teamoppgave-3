@@ -165,10 +165,10 @@ function getRandomObject() {
     }
 
     function winOrLoseCheck() {
-        if(points == win) {
+        if(points >= win) {
             winFunction();
         }
-        else if(points == lose) {
+        else if(points <= lose) {
             loseFunction();
         }
     }
