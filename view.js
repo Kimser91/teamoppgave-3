@@ -6,22 +6,120 @@ function updateView()
     `
 } 
 
-function getRandomPerson()
-{
-   let random = Math.floor(Math.random()*10)
-    if(random == 1)
-        {
-           let m = document.getElementById('you-meet').innerHTML = /*html*/
+
+
+function getRandomPerson() {
+    let random = Math.floor(Math.random() * 4)
+    if (random == 1) {
+        let m = document.getElementById('you-meet').innerHTML = /*html*/
             `
             <div> Eskil</div><br>
             <div>Hva tenker du om LoC eller GM?</div>
+
+            <button onclick="correctGreeting()">Det er det beste i verden</button>
+            <button onclick="wrongGreeting()">Bare søppel</button>
+
             `
-            return m;
-        }
+        return m;
+    }
+    else if (random == 2) {
+        let m = document.getElementById('you-meet').innerHTML = /*HTML*/
+            `
+    <div> Rebecka</div><br>
+    <div>Hva gjør dere?</div>
 
+    <button onclick="correctGreeting()">Morramøte</button>
+    <button onclick="wrongGreeting()">Gaming</button>
 
-    
+    `
+        return m;
+    }
+    else if (random == 3) {
+        let m = document.getElementById('you-meet').innerHTML = /*HTML*/
+    `
+    <div> Marie</div><br>
+    <div>Er det lurt å skrive logg?</div>
+
+    <button onclick="correctGreeting()">Ja</button>
+    <button onclick="wrongGreeting()">Nei</button>
+    `
+        return m;
+
+    }
+    else {getRandomPerson()};
+
 }
+
+
+function getRandomObject() {
+    let random = Math.floor(Math.random() * 5)
+    if (random ==1){
+        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+        `
+            <div>Sprayboks</div>
+            <div>Rød</div>
+
+        <button onclick=>Aksepter</button>
+        <button onclick=>Avslå</button>
+        `
+        return m;
+    }
+    else if (random ==2){
+        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+        `
+            <div>Wunderbaum</div>
+            <div>Grønn</div>
+
+        <button onclick=>Aksepter</button>
+        <button onclick=>Avslå</button>
+        `
+        return m;
+    }
+    else if (random ==3){
+        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+        `
+            <div>Terning</div>
+            <div>Rosa</div>
+
+        <button onclick=>Aksepter</button>
+        <button onclick=>Avslå</button>
+        `
+        return m;
+    }
+    else if (random ==4){
+        let m = document.getElementById("you-found").innerHTML = /*HTML*/
+        `
+            <div>Eksos</div>
+            <div>Krom</div>
+
+        <button onclick=>Aksepter</button>
+        <button onclick=>Avslå</button>
+        `
+        return m;
+    }
+    else {getRandomObject()};
+}
+
+    function correctGreeting(){
+        multiplyer++
+        points = points * multiplyer
+        document.getElementById("you-meet").innerHTML = 
+        `
+        <div>Correct!</div>
+        `
+    }
+
+    function wrongGreeting(){
+    multiplyer= 0.5
+    points = points * multiplyer
+    document.getElementById("you-meet").innerHTML = 
+    `
+    <div>Wrong!</div>
+    `
+    }
+
+    function Co
+    
     
     function changeColor() {
     
