@@ -188,8 +188,8 @@ function getRandomObject() {
     function changeColor() {
     
     
-        if (!document.getElementById('car__front').style.backgroundColor == 'red') {
-            document.getElementById('car__front').style.backgroundColor == 'red';
+        if (!document.getElementById('car__front').style.borderBottomColor == 'red') {
+            document.getElementById('car__front').style.borderBottomColor == 'red';
         }
     
         else if (!document.getElementById('car__middle').style.backgroundColor == 'red') {
@@ -213,8 +213,8 @@ function getRandomObject() {
             document.getElementById('back-right-door').style.backgroundColor == 'red';
     
         }
-        else if (!document.getElementById('car__back').style.backgroundColor == 'red') {
-            document.getElementById('car__back').style.backgroundColor == 'red';
+        else if (!document.getElementById('car__back').style.borderTopColor == 'red') {
+            document.getElementById('car__back').style.borderTopColor == 'red';
         }
     
     }
