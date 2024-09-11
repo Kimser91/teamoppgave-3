@@ -1,3 +1,17 @@
+/*
+*
+* #car__front:  border-bottom: 180px solid red;
+* #roof:        background-color: red;
+* #car__back:   border-top: 70px solid red;
+*
+* #front-left-door:   background-color: red;
+* #front-right-door:  background-color: red;
+* #back-left-door:    background-color: red;
+* #back-right-door:   background-color: red;
+*
+*/
+
+
 :root {
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;
@@ -193,8 +207,23 @@ button:hover {
 .door {
     width: 10px;
     height: 120px;
-    background-color: red;
     z-index: 10;
+}
+
+#front-left-door {
+    background-color: red;
+}
+
+#front-right-door {
+    background-color: red;
+}
+
+#back-left-door {
+    background-color: red;
+}
+
+#back-right-door {
+    background-color: red;
 }
 
 .door-left {
