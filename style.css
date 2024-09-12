@@ -135,7 +135,7 @@ button:hover {
 }
 
 #car__front {
-    border-bottom: 180px solid white;
+    /*border-bottom: 180px solid white;*/
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     width: 260px;
@@ -153,7 +153,7 @@ button:hover {
 #roof {
     width: 300px;
     height: 300px;
-    background-color: white;
+    /*background-color: white;*/
     z-index: 10;
 }
 
@@ -225,19 +225,19 @@ button:hover {
 }
 
 #front-left-door {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 #front-right-door {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 #back-left-door {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 #back-right-door {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .door-left {

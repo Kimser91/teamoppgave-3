@@ -9,13 +9,13 @@ function updateView()
     </div>
     <div id="road">
         <div id="car">
-            <div id="car__front"></div>
+            <div id="car__front" style="border-bottom: 180px solid ${frontColor}"></div>
             <div id="car__middle">
                 <div class="door-container">
-                    <div id="front-left-door" class="door border door-left" style="background-color: blue"></div>
-                    <div id="front-right-door" class="door border door-left" style="background-color: blue"></div>
+                    <div id="front-left-door" class="door border door-left" style="background-color: ${frontLeftDoorColor}"></div>
+                    <div id="front-right-door" class="door border door-left" style="background-color: ${frontRightDoorColor}"></div>
                 </div>
-                <div id="roof">
+                <div id="roof" style="background-color: ${roofColor}">
                     <div class="front-window"></div>
                     <div class="front-side-windows"></div>
                     <div class="back-side-windows"></div>
@@ -23,8 +23,8 @@ function updateView()
                     <div class="roof-frame"></div>
                 </div>
                 <div class="door-container">
-                    <div id="back-left-door" class="door border door-right" style="background-color: blue"></div>
-                    <div id="back-right-door" class="door border door-right" style="background-color: blue"></div>
+                    <div id="back-left-door" class="door border door-right" style="background-color: ${backLeftDoorColor}"></div>
+                    <div id="back-right-door" class="door border door-right" style="background-color: ${backRightDoorColor}"></div>
                 </div>
             </div>
             <div id="car__back"></div>
@@ -51,9 +51,8 @@ function updateView()
 function startDriving() 
 {
     let r = Math.floor(Math.random()*100);
-    if(r < 20){getRandomPerson()}
-    else if(r > 20){getRandomObject()}
-    else {startDriving()}
+    if(r < 10){getRandomPerson()}
+    else if(r >= 10){getRandomObject()}
 }
 
 function getRandomPerson() {
@@ -141,18 +140,14 @@ function wrongGreeting(){
 }
 
 function acceptItem(){
-    
- 
     if (document.getElementById("you-found1").innerHTML.includes("Sprayboks")) 
         {
             number++
             points = points + 5
             changeColor();
-          
             startDriving()
             console.log(number)
-        }
-    else {
+        } else {
             points++
             updateView()
             startDriving()
@@ -164,27 +159,24 @@ function declineItem(){
     startDriving()
 }
 
-
 function changeColor() {
-    if (document.getElementById('car__front').style.borderBottomColor != 'red') {
-        document.getElementById('car__front').style.borderBottomColor = 'red';
-    } else if (document.getElementById('car__middle').style.backgroundColor != 'red') {
-        document.getElementById('car__middle').style.backgroundColor = 'red';
-    } else if (document.getElementById('front-left-door').style.backgroundColor != 'red') {
-        document.getElementById('front-left-door').style.backgroundColor = 'red';
-    } else if (document.getElementById('front-right-door').style.backgroundColor != 'red') {
-        document.getElementById('front-right-door').style.backgroundColor = 'red';
-    } else if (document.getElementById('roof').style.backgroundColor != 'red') {
-        document.getElementById('roof').style.backgroundColor = 'red';
-    } else if (document.getElementById('back-left-door').style.backgroundColor != 'red') {
-        document.getElementById('back-left-door').style.backgroundColor = 'red';
-    } else if (document.getElementById('back-right-door').style.backgroundColor != 'red') {
-        document.getElementById('back-right-door').style.backgroundColor = 'red';
-    } else if (document.getElementById('car__back').style.borderTopColor != 'red') {
-        document.getElementById('car__back').style.borderTopColor = 'red';
+    let hardColor = 'red';
+    if (frontColor != hardColor) {
+        frontColor = hardColor;
+    } else if (frontLeftDoorColor != hardColor) {
+        frontLeftDoorColor = hardColor;
+    } else if (frontRightDoorColor != hardColor) {
+        frontRightDoorColor = hardColor;
+    } else if (roofColor != hardColor) {
+        roofColor = hardColor;
+    } else if (backLeftDoorColor != hardColor) {
+        backLeftDoorColor = hardColor;
+    } else if (backRightDoorColor != hardColor) {
+        backRightDoorColor = hardColor;
+    } else if (backColor != hardColor) {
+        backColor = hardColor;
     }
-
-
+    updateView();
 }
 
 function winOrLoseCheck() {
