@@ -237,15 +237,15 @@ function getRandomObject() {
     function winFunction() {
         html.innerHTML = /*HTML*/ `
         <div>Gratulerer, du vant spillet!!</div>
-        <button onclick="location.reload()">Spill igjen</button>
         <img src="plan/snoop-dogg-dancing.gif" alt="Snoop Dogg danser fordi du vant <3">
+        <button onclick="location.reload()">Spill igjen</button>
         `
     }
     
     function loseFunction() {
         html.innerHTML = /*HTML*/ `
         <div>Lol du tapte, noob</div>
-        <button onclick="location.reload()">Spill igjen</button>
         <img src="plan/kto-kounotori.gif" alt="Du er en taper >:(">
+        <button onclick="location.reload()">Spill igjen</button>
         `
     }
