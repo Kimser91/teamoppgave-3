@@ -70,7 +70,7 @@ function getRandomPerson() {
         document.getElementById("you-met1").innerHTML = /*html*/
             `
             <div> Eskil</div><br>
-            <div>Hva tenker du om LoC eller GM?</div>
+            <div>Hva tenker du om LoC eller GM?</div><br>
 
             <button onclick="correctGreeting()">Det er det beste i verden</button>
             <button onclick="wrongGreeting()">Bare søppel</button>

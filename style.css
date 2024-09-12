@@ -79,10 +79,12 @@ button:hover {
 }
 
 .you_met-found__window {
+    display: flex;
     width: 400px;
     height: 400px;
     border-radius: 1em;
-
+    justify-content: center;
+    align-items: center;
     background-color: var(--gray);
 }
 
