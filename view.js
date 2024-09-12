@@ -8,6 +8,7 @@ function updateView()
     
     </div>
     <div id="road">
+        <div id="your_points">Points:&nbsp;${points}</div>
         <div id="car">
             <div id="car__front" style="border-bottom: 180px solid ${frontColor}"></div>
             <div id="car__middle">
@@ -201,4 +202,5 @@ function loseFunction() {
     <img src="plan/kto-kounotori.gif" alt="Du er en taper >:(">
     <button onclick="location.reload()">Spill igjen</button>
     `;
+
 }
