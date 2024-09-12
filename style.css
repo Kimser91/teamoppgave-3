@@ -291,3 +291,13 @@ button:hover {
     bottom: 40px;
     right: 0;
 }
+
+.blink_ {
+    animation: blinker 1s linear infinite;
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
