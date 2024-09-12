@@ -53,6 +53,7 @@ function startDriving()
     let r = Math.floor(Math.random()*100);
     if(r < 20){getRandomPerson()}
     else if(r > 20){getRandomObject()}
+    else {startDriving()}
 }
 
 function getRandomPerson() {
@@ -141,9 +142,20 @@ function wrongGreeting(){
 }
 
 function acceptItem(){
-    points++
-    updateView()
-    startDriving()
+    
+ 
+    if (document.getElementById("you-found1").innerHTML.includes("Sprayboks")) 
+        {
+            points = points + 5
+            changeColor();
+            updateView()
+            startDriving()
+        }
+    else {
+            points++
+            updateView()
+            startDriving()
+         }
 }
 
 function declineItem(){
@@ -154,22 +166,23 @@ function declineItem(){
 
 function changeColor() {
     if (!document.getElementById('car__front').style.borderBottomColor == 'red') {
-        document.getElementById('car__front').style.borderBottomColor == 'red';
+        document.getElementById('car__front').style.borderBottomColor = 'red';
     } else if (!document.getElementById('car__middle').style.backgroundColor == 'red') {
-        document.getElementById('car__middle').style.backgroundColor == 'red';
+        document.getElementById('car__middle').style.backgroundColor = 'red';
     } else if (!document.getElementById('front-left-door').style.backgroundColor == 'red') {
-        document.getElementById('front-left-door').style.backgroundColor == 'red';
+        document.getElementById('front-left-door').style.backgroundColor = 'red';
     } else if (!document.getElementById('front-right-door').style.backgroundColor == 'red') {
-        document.getElementById('front-right-door').style.backgroundColor == 'red';
+        document.getElementById('front-right-door').style.backgroundColor = 'red';
     } else if (!document.getElementById('roof').style.backgroundColor == 'red') {
-        document.getElementById('roof').style.backgroundColor == 'red';
+        document.getElementById('roof').style.backgroundColor = 'red';
     } else if (!document.getElementById('back-left-door').style.backgroundColor == 'red') {
-        document.getElementById('back-left-door').style.backgroundColor == 'red';
+        document.getElementById('back-left-door').style.backgroundColor = 'red';
     } else if (!document.getElementById('back-right-door').style.backgroundColor == 'red') {
-        document.getElementById('back-right-door').style.backgroundColor == 'red';
+        document.getElementById('back-right-door').style.backgroundColor = 'red';
     } else if (!document.getElementById('car__back').style.borderTopColor == 'red') {
-        document.getElementById('car__back').style.borderTopColor == 'red';
+        document.getElementById('car__back').style.borderTopColor = 'red';
     }
+
 
 }
 
