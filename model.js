@@ -4,6 +4,8 @@ let points = 25;
 let win = 50;
 let lose = 0;
 let multiplyer = 1;
+let number = 0;
+let color = 'white';
 
 
 

@@ -12,8 +12,8 @@ function updateView()
             <div id="car__front"></div>
             <div id="car__middle">
                 <div class="door-container">
-                    <div id="front-left-door" class="door border door-left"></div>
-                    <div id="front-right-door" class="door border door-left"></div>
+                    <div id="front-left-door" class="door border door-left" style="background-color: blue"></div>
+                    <div id="front-right-door" class="door border door-left" style="background-color: blue"></div>
                 </div>
                 <div id="roof">
                     <div class="front-window"></div>
@@ -23,8 +23,8 @@ function updateView()
                     <div class="roof-frame"></div>
                 </div>
                 <div class="door-container">
-                    <div id="back-left-door" class="door border door-right"></div>
-                    <div id="back-right-door" class="door border door-right"></div>
+                    <div id="back-left-door" class="door border door-right" style="background-color: blue"></div>
+                    <div id="back-right-door" class="door border door-right" style="background-color: blue"></div>
                 </div>
             </div>
             <div id="car__back"></div>
@@ -145,10 +145,12 @@ function acceptItem(){
  
     if (document.getElementById("you-found1").innerHTML.includes("Sprayboks")) 
         {
+            number++
             points = points + 5
             changeColor();
-            updateView()
+          
             startDriving()
+            console.log(number)
         }
     else {
             points++
@@ -164,21 +166,21 @@ function declineItem(){
 
 
 function changeColor() {
-    if (!document.getElementById('car__front').style.borderBottomColor == 'red') {
+    if (document.getElementById('car__front').style.borderBottomColor != 'red') {
         document.getElementById('car__front').style.borderBottomColor = 'red';
-    } else if (!document.getElementById('car__middle').style.backgroundColor == 'red') {
+    } else if (document.getElementById('car__middle').style.backgroundColor != 'red') {
         document.getElementById('car__middle').style.backgroundColor = 'red';
-    } else if (!document.getElementById('front-left-door').style.backgroundColor == 'red') {
+    } else if (document.getElementById('front-left-door').style.backgroundColor != 'red') {
         document.getElementById('front-left-door').style.backgroundColor = 'red';
-    } else if (!document.getElementById('front-right-door').style.backgroundColor == 'red') {
+    } else if (document.getElementById('front-right-door').style.backgroundColor != 'red') {
         document.getElementById('front-right-door').style.backgroundColor = 'red';
-    } else if (!document.getElementById('roof').style.backgroundColor == 'red') {
+    } else if (document.getElementById('roof').style.backgroundColor != 'red') {
         document.getElementById('roof').style.backgroundColor = 'red';
-    } else if (!document.getElementById('back-left-door').style.backgroundColor == 'red') {
+    } else if (document.getElementById('back-left-door').style.backgroundColor != 'red') {
         document.getElementById('back-left-door').style.backgroundColor = 'red';
-    } else if (!document.getElementById('back-right-door').style.backgroundColor == 'red') {
+    } else if (document.getElementById('back-right-door').style.backgroundColor != 'red') {
         document.getElementById('back-right-door').style.backgroundColor = 'red';
-    } else if (!document.getElementById('car__back').style.borderTopColor == 'red') {
+    } else if (document.getElementById('car__back').style.borderTopColor != 'red') {
         document.getElementById('car__back').style.borderTopColor = 'red';
     }
 
