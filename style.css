@@ -231,22 +231,23 @@ button:hover {
     height: 120px;
     z-index: 10;
 }
-
+/*
 #front-left-door {
-    /*background-color: white;*/
+    background-color: white;
 }
 
 #front-right-door {
-    /*background-color: white;*/
+    background-color: white;
 }
 
 #back-left-door {
-    /*background-color: white;*/
+    background-color: white;
 }
 
 #back-right-door {
-    /*background-color: white;*/
+    background-color: white;
 }
+*/
 
 .door-left {
     border-radius: 50% 0 0 50%;

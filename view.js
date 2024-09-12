@@ -48,14 +48,6 @@ function updateView()
     winOrLoseCheck();
 } 
 
-
-function startDriving() 
-{
-    let r = Math.floor(Math.random()*100);
-    if(r < 10){getRandomPerson()}
-    else if(r >= 10){getRandomObject()}
-}
-
 function getRandomPerson() {
     let random = Math.floor(Math.random() * 4)
     if (random == 1) {
@@ -82,7 +74,6 @@ function getRandomPerson() {
     } else {getRandomPerson()};
 
 }
-
 
 function getRandomObject() {
     let random = Math.floor(Math.random() * 5);
@@ -140,26 +131,6 @@ function wrongGreeting(){
     startDriving()
 }
 
-function acceptItem(){
-    if (document.getElementById("you-found1").innerHTML.includes("Sprayboks")) 
-        {
-            number++
-            points = points + 5
-            changeColor();
-            startDriving()
-            console.log(number)
-        } else {
-            points++
-            updateView()
-            startDriving()
-         }
-}
-
-function declineItem(){
-    updateView()
-    startDriving()
-}
-
 function changeColor() {
     let hardColor = 'red';
     if (frontColor != hardColor) {
@@ -178,14 +149,6 @@ function changeColor() {
         backColor = hardColor;
     }
     updateView();
-}
-
-function winOrLoseCheck() {
-    if(points >= win) {
-        winFunction();
-    } else if (points <= lose) {
-        loseFunction();
-    }
 }
 
 function winFunction() {
