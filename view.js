@@ -195,7 +195,7 @@ function winOrLoseCheck() {
 
 function winFunction() {
     html.innerHTML = /*HTML*/ `
-    <div style="font: system-ui; font-size: 2em; color: white;" class="blink">Gratulerer,<br>du vant spillet!!</div>
+    <div class="blink">Gratulerer,<br>du vant spillet!!</div>
     <img src="plan/snoop-dogg-dancing.gif" alt="Snoop Dogg danser fordi du vant <3">
     <button onclick="location.reload()">Spill igjen</button>
     `;

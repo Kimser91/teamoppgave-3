@@ -298,7 +298,10 @@ button:hover {
     }
 }
 
-.blink_ {
+.blink {
+    font: system-ui;
+    font-size: 2em;
+    color: white;
     animation: blinker 1s linear infinite;
 }
   
