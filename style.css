@@ -46,6 +46,16 @@ html, body {
     background-color: var(--base);
 }
 
+button {
+    font-family: system-ui;
+    font-size: 1.3em;
+    padding: 5px;
+    background-color: var(--peach);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
 button:hover {
     opacity: 0.7;
     cursor: pointer;
@@ -66,10 +76,12 @@ button:hover {
 
 #you-met,
 #you-found {
+    font-size: 1.1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    text-wrap: wrap;
 }
 
 .you_met-found__text {
