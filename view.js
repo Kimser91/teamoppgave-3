@@ -3,8 +3,8 @@ function updateView()
 {
     html.innerHTML = /*HTML*/ `
     <div id="you-met">
-    <div id="you-met1" class="you_met-found__text">You met:</div>
-    <div class="you_met-found__window"></div>
+    <div  class="you_met-found__text">You met:</div>
+    <div id="you-met1" class="you_met-found__window"></div>
     
 </div>
 <div id="road">
@@ -42,13 +42,14 @@ function updateView()
         <div class="tyre-front-right tyre"></div>
         <div class="tyre-back-left tyre"></div>
         <div class="tyre-back-right tyre"></div>
-
+        <br>
+        <button onclick="startDriving()">wanna drive?</button>
     </div>
-    <button onclick="startDriving()">wanna drive?</button>
+    
 </div>
 <div id="you-found">
-    <div id="you-found1" class="you_met-found__text">You found:</div>
-    <div class="you_met-found__window"></div>
+    <div  class="you_met-found__text">You found:</div>
+    <div id="you-found1" class="you_met-found__window"></div>
     
 </div>
     `
