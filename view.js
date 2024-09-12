@@ -27,7 +27,7 @@ function updateView()
                     <div id="back-right-door" class="door border door-right" style="background-color: ${backRightDoorColor}"></div>
                 </div>
             </div>
-            <div id="car__back"></div>
+            <div id="car__back" style="border-top: 70px solid ${backColor}"></div>
             <div class="tyre-front-left tyre"></div>
             <div class="tyre-front-right tyre"></div>
             <div class="tyre-back-left tyre"></div>

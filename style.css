@@ -251,7 +251,7 @@ button:hover {
 }
 
 #car__back {
-    border-top: 70px solid white;
+    /*border-top: 70px solid white;*/
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     width: 280px;
