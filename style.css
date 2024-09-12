@@ -312,4 +312,35 @@ button:hover {
     color: white;
     animation: blinker 1s linear infinite;
 }
-  
+
+@keyframes driving {
+    0% {
+        top: 0;
+    }
+
+    20% {
+        top: 1500px;
+    }
+
+    100% {
+        top: 1500px;
+    }
+}
+
+.sign {
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 40px;
+    z-index: 20;
+    animation: driving 2s linear infinite;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-family: system-ui;
+}
