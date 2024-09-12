@@ -59,21 +59,21 @@ function getRandomPerson() {
     let random = Math.floor(Math.random() * 4)
     if (random == 1) {
         document.getElementById("you-met1").innerHTML = /*html*/`
-            <div> Eskil</div><br>
+            <div>Eskil:&nbsp;</div><br>
             <div>Hva tenker du om LoC eller GM?</div><br>
             <button onclick="correctGreeting()">Det er det beste i verden</button>
             <button onclick="wrongGreeting()">Bare søppel</button>
             `;
     } else if (random == 2) {
         document.getElementById("you-met1").innerHTML = /*HTML*/ `
-            <div> Rebecka</div><br>
+            <div>Rebecka:&nbsp;</div><br>
             <div>Hva gjør dere?</div>
             <button onclick="correctGreeting()">Morramøte</button>
             <button onclick="wrongGreeting()">Gaming</button>
             `;
     } else if (random == 3) {
         document.getElementById("you-met1").innerHTML = /*HTML*/`
-            <div> Marie</div><br>
+            <div>Marie:&nbsp;</div><br>
             <div>Er det lurt å skrive logg?</div>
             <button onclick="correctGreeting()">Ja</button>
             <button onclick="wrongGreeting()">Nei</button>
@@ -87,15 +87,14 @@ function getRandomObject() {
     let random = Math.floor(Math.random() * 5);
     if (random ==1){
        document.getElementById("you-found1").innerHTML = /*HTML*/`
-        <div>Sprayboks</div>
+        <div>Sprayboks:&nbsp;</div>
         <div>Rød</div>
         <button onclick="acceptItem()">Aksepter</button>
         <button onclick=>Avslå</button>
         `;
     } else if (random ==2){
-       document.getElementById("you-found1").innerHTML = /*HTML*/
-        `
-            <div>Wunderbaum</div>
+       document.getElementById("you-found1").innerHTML = /*HTML*/`
+            <div>Wunderbaum:&nbsp;</div>
             <div>Grønn</div>
             <button onclick="acceptItem()">Aksepter</button>
             <button onclick="declineItem()">Avslå</button>
@@ -103,14 +102,14 @@ function getRandomObject() {
        
     } else if (random ==3){
        document.getElementById("you-found1").innerHTML = /*HTML*/`
-            <div>Terning</div>
+            <div>Terning:&nbsp;</div>
             <div>Rosa</div>
             <button onclick="acceptItem()">Aksepter</button>
             <button onclick="declineItem()">Avslå</button>
         `;
     } else if (random ==4){
         document.getElementById("you-found1").innerHTML = /*HTML*/`
-            <div>Eksos</div>
+            <div>Eksos:&nbsp;</div>
             <div>Krom</div>
             <button onclick="acceptItem()">Aksepter</button>
             <button onclick="declineItem()">Avslå</button>
@@ -183,7 +182,7 @@ function winOrLoseCheck() {
 
 function winFunction() {
     html.innerHTML = /*HTML*/ `
-    <div>Gratulerer, du vant spillet!!</div>
+    <div style="font: system-ui; font-size: 2em; color: white;">Gratulerer,<br>du vant spillet!!</div>
     <img src="plan/snoop-dogg-dancing.gif" alt="Snoop Dogg danser fordi du vant <3">
     <button onclick="location.reload()">Spill igjen</button>
     `;
