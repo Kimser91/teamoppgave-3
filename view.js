@@ -167,20 +167,28 @@ function changeColor() {
     let hardColor = 'red';
     if (frontColor != hardColor) {
         frontColor = hardColor;
+        updateView()
     } else if (frontLeftDoorColor != hardColor) {
         frontLeftDoorColor = hardColor;
+        updateView()
     } else if (frontRightDoorColor != hardColor) {
         frontRightDoorColor = hardColor;
+        updateView()
     } else if (roofColor != hardColor) {
         roofColor = hardColor;
+        updateView()
     } else if (backLeftDoorColor != hardColor) {
         backLeftDoorColor = hardColor;
+        updateView()
     } else if (backRightDoorColor != hardColor) {
         backRightDoorColor = hardColor;
+        updateView()
     } else if (backColor != hardColor) {
         backColor = hardColor;
+        updateView()
     }
-    updateView();
+    else {winFunction()}
+    
 }
 
 function winOrLoseCheck() {
