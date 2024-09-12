@@ -1,39 +1,35 @@
-/*
-function findPanel() {
-for(let i = 0; i < model.data.panels.length; i++){
-    if(!model.data.panels.contains('red') && hasDone == false) 
-    {
-        hasDone = true
-        model.data.panels[i].color = 'red'
-    }
-    }
-
+function startDriving() 
+{
+    let r = Math.floor(Math.random()*100);
+    if(r < 10){getRandomPerson()}
+    else if(r >= 10){getRandomObject()}
 }
 
-function foundSpraycan() 
-{
-    hasDone = false
-    findPanel();
+function acceptItem(){
+    if (document.getElementById("you-found1").innerHTML.includes("Sprayboks")) 
+        {
+            number++
+            points = points + 5
+            changeColor();
+            startDriving()
+            console.log(number)
+        } else {
+            points++
+            updateView()
+            startDriving()
+         }
 }
-   for (0+1  = 6)*/ 
 
-/*function changecolor() 
-{
-    if(!document.getElementById('front-left-door').style.backgroundColor == 'red')
-        {
-            document.getElementById('front-left-door').style.backgroundColor = 'red'
-        }
-}*/
 
-/*function winOrLoseCheck() 
-{
-    if(points == win) 
-        {
-            //winfunction()
-        }
-    else if (points == lose) 
-        {
-            //losefunction()
-        }
-}*/
+function declineItem(){
+    updateView()
+    startDriving()
+}
 
+function winOrLoseCheck() {
+    if(points >= win) {
+        winFunction();
+    } else if (points <= lose) {
+        loseFunction();
+    }
+}
